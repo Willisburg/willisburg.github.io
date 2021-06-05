@@ -6,8 +6,10 @@ As you may have noticed, right now it is a bit barren, a lot of projects i have 
 
 ### Projects
 
-[Spiral project](https://willisburg.github.io/spiral).                                                            [Grid spiral project](https://willisburg.github.io/gridspiral).
-
+[Spiral project](https://willisburg.github.io/spiral).
+![Image](https://i.imgur.com/Bo6crMQ.png)
+[Grid spiral project](https://willisburg.github.io/gridspiral).
+![Image](https://i.imgur.com/IwyBk29.png)
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
