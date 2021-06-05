@@ -9,3 +9,6 @@ A project inspired by a [youtube video](https://www.youtube.com/watch?v=EK32jo7i
 - text size slider increases and decreases the size of text. (not very useful).
 
 ![Image](https://i.imgur.com/Bo6crMQ.png)
+
+## Made with:
+- [p5.js](https://p5js.org/).
