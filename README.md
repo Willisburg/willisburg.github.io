@@ -20,7 +20,7 @@ As you may have noticed, right now it is a bit barren, a lot of projects i have 
 - C
 - C#
 - Python
-- GML Game maker language)
+- GML (Game maker language)
 - Powershell
 
 ### Contacts
