@@ -1,6 +1,6 @@
 # Spiral visualization
 
-A project inspired by a [youtube video](https://www.youtube.com/watch?v=EK32jo7i5LQ&t=121s) by 3Blue1Brown. Continued from my previous [project](https://github.com/Willisburg/willisburg.github.io/tree/main/gridspiral).
+A project inspired by a [youtube video](https://www.youtube.com/watch?v=EK32jo7i5LQ) by 3Blue1Brown. Continued from my previous [project](https://github.com/Willisburg/willisburg.github.io/tree/main/gridspiral).
 
 ##Controls:
 - scale slider increases/decreases both the scale and point count.
