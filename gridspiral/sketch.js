@@ -76,6 +76,7 @@ function draw() {
 		fpsText.html('fps: '+ int(frameRate()).toString());
 	tick++;
 	
+	//iterating through the spiral, drawing if criteria is met
 	for(let i = 0; i < maxvalue; i++)
 	{
 		startColor = [227, 76, 38];
