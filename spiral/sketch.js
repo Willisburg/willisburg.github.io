@@ -63,10 +63,11 @@ function setup() {
 
 function draw() {
 	//setting up a background:
-	stroke(88, 166, 255);
-	fill(13, 17, 23);
+	stroke(18, 18, 18);
+	fill(25, 25, 25);
 	rect(0, 0, width, height);
 	
+	stroke(255, 204, 0);	
 	line(width/2, 0, width/2, height);
 	line(0, height/2, width, height/2);
 		
@@ -97,12 +98,14 @@ function draw() {
 		{
 			//Drawing circles in polar coordinates
 			//if criteria is met
-			fill(88, 166, 255);
+			fill(240, 231, 213);
+			stroke(240, 231, 213);
 			circle(position.x * scale + width  / 2, 
 				  -position.y * scale + height / 2, 5);
 			
 			//Drawing values of circles in polar coordinates
-			fill(0);
+			fill(25, 25, 25;
+			stroke(25, 25, 25);
 			textsize = 100 / slider1.value()*textsize2;
 			textSize(textsize);
 			text(i, 
