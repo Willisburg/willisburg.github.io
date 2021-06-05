@@ -9,6 +9,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 [Spiral project](https://willisburg.github.io/spiral).
+
 [Grid spiral project](https://willisburg.github.io/gridspiral).
 
 ```markdown
