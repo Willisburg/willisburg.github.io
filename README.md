@@ -1,34 +1,12 @@
-## Welcome to GitHub Pages
+## Willisburg's portfolio
 
-You can use the [editor on GitHub](https://github.com/Willisburg/willisburg.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+A small website I designed to showcase my work.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+As you may have noticed, right now it is a bit barren, a lot of projects i have are unorganized. For now I have cleaned up my most recent two projects for showcase.
 
-### Markdown
+### Projects
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-[Spiral project](https://willisburg.github.io/spiral).
-
-[Grid spiral project](https://willisburg.github.io/gridspiral).
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+[Spiral project](https://willisburg.github.io/spiral).                                                            [Grid spiral project](https://willisburg.github.io/gridspiral).
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
