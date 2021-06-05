@@ -104,7 +104,7 @@ function draw() {
 				  -position.y * scale + height / 2, 5);
 			
 			//Drawing values of circles in polar coordinates
-			fill(25, 25, 25;
+			fill(25, 25, 25);
 			stroke(25, 25, 25);
 			textsize = 100 / slider1.value()*textsize2;
 			textSize(textsize);
