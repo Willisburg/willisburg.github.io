@@ -8,4 +8,4 @@ A project inspired by a [youtube video](https://www.youtube.com/watch?v=EK32jo7i
 - if the "check primes" switch is turned on, mod slider will do nothing. Only points with prime values show up.
 - text size slider increases and decreases the size of text. (not very useful)
 
-![Image](https://imgur.com/a/v7NCRq9)
+![Image](https://i.imgur.com/Bo6crMQ.png)
