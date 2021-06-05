@@ -8,9 +8,11 @@ As you may have noticed, right now it is a bit barren, a lot of projects i have 
 
 [Spiral project](https://willisburg.github.io/spiral).
 ![Image](https://i.imgur.com/Bo6crMQ.png)
+[Documentation](https://github.com/Willisburg/willisburg.github.io/tree/main/spiral)
 
 [Grid spiral project](https://willisburg.github.io/gridspiral).
 ![Image](https://i.imgur.com/IwyBk29.png)
+[Documentation](https://github.com/Willisburg/willisburg.github.io/tree/main/gridspiral)
 
 ### Languages I use:
 - JavaScript, p5.js
