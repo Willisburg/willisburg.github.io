@@ -23,5 +23,5 @@ As you may have noticed, right now it is a bit barren, a lot of projects i have 
 
 ### Contacts
 
-Email: nojus.damasevicius@gmail.com
-LinkedIn: https://www.linkedin.com/in/nojus-dama%C5%A1evi%C4%8Dius-128816213/
+-Email: nojus.damasevicius@gmail.com
+-LinkedIn: https://www.linkedin.com/in/nojus-dama%C5%A1evi%C4%8Dius-128816213/
