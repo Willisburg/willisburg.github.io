@@ -14,7 +14,7 @@ function setup() {
 	canvas.position(window.innerWidth/2-width/2, 50, 'relative');
 	
 	//slider for ring count and scale
-	slider1 = createSlider(1, 600, 114);
+	slider1 = createSlider(1, 1000, 200);
 	slider1.position(window.innerWidth/2-width/2, 10);
 	slider1.size(width-20, 10);
 	
@@ -24,7 +24,7 @@ function setup() {
 	slider1Text.style('color', '#c9d1d9');
 		
 	//slider for criteria or number to be divisible by
-	slider2 = createSlider(1, 100, 13);
+	slider2 = createSlider(0, 600, 8, 8);
 	slider2.position(window.innerWidth/2-width/2, 30);
 	slider2.size(width-20, 10);
 	
@@ -79,13 +79,14 @@ function draw() {
 	//iterating through the spiral, drawing if criteria is met
 	for(let i = 0; i < maxvalue; i++)
 	{
-		startColor = [227, 76, 38];
-		endColor = [241, 224, 90];
-		currentColor = colorStep(startColor, endColor, i/maxvalue);
-		position = calcPos(i);
+			position = calcPos(i);
 		if((primeCheck == 0 && i % criteria == 0) || 
 		   (primeCheck == 1 && isPrime(i)))
 		{
+			startColor = [227, 76, 38];
+			endColor = [241, 224, 90];
+			currentColor = colorStep(startColor, endColor, i/maxvalue);
+			
 			fill(currentColor);
 			stroke(currentColor);
 			
@@ -93,6 +94,8 @@ function draw() {
 				-position.y * scale + height / 2 - scale, 
 				 scale, scale);
 		}
+		
+		
 		if(slider1.value() <= 30)
 		{
 			stroke(0);
