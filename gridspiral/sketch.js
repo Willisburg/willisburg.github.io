@@ -14,7 +14,7 @@ function setup() {
 	canvas.position(window.innerWidth/2-width/2, 50, 'relative');
 	
 	//slider for ring count and scale
-	slider1 = createSlider(1, 600, 1);
+	slider1 = createSlider(1, 600, 114);
 	slider1.position(window.innerWidth/2-width/2, 10);
 	slider1.size(width-20, 10);
 	
@@ -24,7 +24,7 @@ function setup() {
 	slider1Text.style('color', '#c9d1d9');
 		
 	//slider for criteria or number to be divisible by
-	slider2 = createSlider(1, 100, 1);
+	slider2 = createSlider(1, 100, 13);
 	slider2.position(window.innerWidth/2-width/2, 30);
 	slider2.size(width-20, 10);
 	
@@ -53,7 +53,7 @@ function draw() {
 	
 	//setting up a background:
 	stroke(88, 166, 255);
-	fill(13, 17, 23);
+	fill(27, 27, 34);
 	rect(0, 0, width, height);
 	line(width/2, 0, width/2, height);
 	line(0, height/2, width, height/2);
@@ -78,38 +78,48 @@ function draw() {
 	
 	for(let i = 0; i < maxvalue; i++)
 	{
-		a = calcPos(i);
+		startColor = [227, 76, 38];
+		endColor = [241, 224, 90];
+		currentColor = colorStep(startColor, endColor, i/maxvalue);
+		position = calcPos(i);
 		if((primeCheck == 0 && i % criteria == 0) || 
 		   (primeCheck == 1 && isPrime(i)))
 		{
-			fill((    i / maxvalue) * 88, 
-				 (    i / maxvalue) * 166, 
-				 (1 - i / maxvalue) * 255);
-			stroke((    i / maxvalue) * 88, 
-				   (    i / maxvalue) * 166, 
-				   (1 - i / maxvalue) * 255);
-			rect(a.x * scale + width  / 2 - scale, 
-				-a.y * scale + height / 2 - scale, 
+			fill(currentColor);
+			stroke(currentColor);
+			
+			rect(position.x * scale + width  / 2 - scale, 
+				-position.y * scale + height / 2 - scale, 
 				 scale, scale);
 		}
-		if(slider1.value() <= 13)
+		if(slider1.value() <= 30)
 		{
 			stroke(0);
 			fill(255);
 			textAlign(CENTER);
 			textsize = 100/slider1.value()
 			textSize(textsize);
-			text(i, a.x * scale + width  / 2 - scale/2, 
-				-a.y * scale + height / 2 - scale/2 + textsize/3);
+			text(i, 
+				 position.x * scale + width  / 2 - scale/2, 
+				-position.y * scale + height / 2 - scale/2 + textsize/3);
 		}
 	}
 }
 
 //checks whether a giver number is prime or not
 //returns 1 if it is prime, 0 otherwise
-function isPrime(num) {
+function isPrime(num) 
+{
   for(let i = 2, s = Math.sqrt(num); i <= s; i++)
     if(num % i === 0) return false;
   return num > 1;
 }
 
+//Calculate a color between start and end given 
+//the ratio between end and start
+function colorStep(start, end, step)
+{
+	return [start[0]+(end[0] - start[0])*step,
+  		    start[1]+(end[1] - start[1])*step,
+ 		    start[2]+(end[2] - start[2])*step];
+}

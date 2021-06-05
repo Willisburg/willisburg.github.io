@@ -16,7 +16,7 @@ function setup() {
 	canvas.position(window.innerWidth/2 - width/2, 50, 'relative');
 	
 	//slider for count and scale
-	slider1 = createSlider(1, 50000, 1);
+	slider1 = createSlider(1, 10000, 6000);
 	slider1.position(window.innerWidth/2 - width/2, 10);
 	slider1.size(width-20, 10);
 	
@@ -36,7 +36,7 @@ function setup() {
 	slider2Text.style('color', '#c9d1d9');
 	
 	//slider for checking prime numbers
-	slider3 = createSlider(0, 1, 0, 1);
+	slider3 = createSlider(0, 1, 1, 1);
 	slider3.position(window.innerWidth/2 - width/2 - 70, 10);
 	slider3.size(50, 10);
 	
@@ -63,16 +63,17 @@ function setup() {
 
 function draw() {
 	//setting up a background:
-	stroke(18, 18, 18);
-	fill(25, 25, 25);
+	stroke(88, 166, 255);
+	fill(22, 27, 34);
 	rect(0, 0, width, height);
+	noFill();
+	circle(width/2, height/2, width);
 	
-	stroke(255, 204, 0);	
 	line(width/2, 0, width/2, height);
 	line(0, height/2, width, height/2);
 		
 	//setting up initial values:
-	let maxvalue = slider1.value()*2;
+	let maxvalue = slider1.value();
 	let scale = width / (slider1.value() * 2);
 	let criteria = slider2.value();
 	let primeCheck = slider3.value();
@@ -93,20 +94,25 @@ function draw() {
 	for(let i = 0; i < maxvalue; i++)
 	{
 		position = polarPos(i, i);
+		
+		startColor = [227, 76, 38];
+		endColor = [241, 224, 90];
+		currentColor = colorStep(startColor, endColor, i/maxvalue);
+		
 		if((primeCheck == 0 && i % criteria == 0) || 
 		   (primeCheck == 1 && isPrime(i)))
 		{
 			//Drawing circles in polar coordinates
 			//if criteria is met
-			fill(240, 231, 213);
-			stroke(240, 231, 213);
+			fill(currentColor);
+			stroke(currentColor);
 			circle(position.x * scale + width  / 2, 
 				  -position.y * scale + height / 2, 5);
 			
 			//Drawing values of circles in polar coordinates
-			fill(25, 25, 25);
-			stroke(25, 25, 25);
-			textsize = 100 / slider1.value()*textsize2;
+			stroke(0);
+			fill(255);
+			textsize = 10 / maxvalue*textsize2;
 			textSize(textsize);
 			text(i, 
 				 position.x * scale + width  / 2, 
@@ -130,4 +136,13 @@ function isPrime(num) {
   for(let i = 2, s = Math.sqrt(num); i <= s; i++)
     if(num % i === 0) return false;
   return num > 1;
+}
+
+//Calculate a color between start and end given 
+//the ratio between end and starts
+function colorStep(start, end, step)
+{
+	return [start[0]+(end[0] - start[0])*step,
+  		    start[1]+(end[1] - start[1])*step,
+ 		    start[2]+(end[2] - start[2])*step];
 }
