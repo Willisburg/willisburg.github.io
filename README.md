@@ -1,8 +1,6 @@
 ## Willisburg's portfolio
 
-A small website I designed to showcase my work.
-
-As you may have noticed, right now it is a bit barren, a lot of projects i have are unorganized. For now I have cleaned up my most recent two projects for showcase.
+Hello, my name is Nojus Damaševičius. I'm a self taught programmer currently studyinh in Kaunas University of Technology in Kaunas, Lithuania. I've been programming for over 5 years, and have been interested in computers, electronics and science since childhood. I have a lot of projects flying around the corners of my SSD, some of them are nearly 
 
 ### Projects
 
