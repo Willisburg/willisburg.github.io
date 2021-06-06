@@ -2,10 +2,10 @@ let width = 600;
 let height = 600;
 let slider1;
 let slider2;
-let slider3;
+
 let slider1Text;
 let slider2Text;
-let slider3Text;
+
 let fpsText;
 let tick = 0;
 
@@ -33,15 +33,7 @@ function setup() {
 	slider2Text.style('margin', '0');
 	slider2Text.style('color', '#c9d1d9');
 	
-	//slider for checking prime numbers
-	slider3 = createSlider(0, 1, 0, 1);
-	slider3.position(window.innerWidth/2 - width/2 - 70, 10);
-	slider3.size(50, 10);
 	
-	slider3Text = createElement('h5', 'check primes');
-	slider3Text.position(window.innerWidth/2 - width/2 - 170, 8);
-	slider3Text.style('margin', '0');
-	slider3Text.style('color', '#c9d1d9');
 	
 	fpsText = createElement('h5', 'fps: ');
 	fpsText.position(0, 8);
@@ -62,14 +54,12 @@ function draw() {
 	let maxvalue = calcBL(slider1.value());
 	let scale = width / (slider1.value() * 2);
 	let criteria = slider2.value();
-	let primeCheck = slider3.value();
+	
 	
 	//updating scale and mod labels
 	slider1Text.html('scale: '+ slider1.value().toString());
-	if(primeCheck == 0)
-		slider2Text.html('mod: '+ slider2.value().toString());
-	else
-		slider2Text.html('mod: Primes');
+	slider2Text.html('mod: '+ slider2.value().toString());
+	
 	
 	//updating fps label
 	if(tick % 10 == 0)
@@ -77,12 +67,10 @@ function draw() {
 	tick++;
 	
 	//iterating through the spiral, drawing if criteria is met
-	for(let i = 0; i < maxvalue; i++)
+	for(let i = criteria; i < maxvalue; i+=criteria)
 	{
 			position = calcPos(i);
-		if((primeCheck == 0 && (i % criteria == 0)) || 
-		   (primeCheck == 1 && isPrime(i)))
-		{
+		
 			startColor = [227, 76, 38];
 			endColor = [241, 224, 90];
 			currentColor = colorStep(startColor, endColor, i/maxvalue);
@@ -93,7 +81,7 @@ function draw() {
 			rect(position.x * scale + width  / 2 - scale, 
 				-position.y * scale + height / 2 - scale, 
 				 scale, scale);
-		}
+		
 		
 		
 		if(slider1.value() <= 30)
@@ -108,15 +96,6 @@ function draw() {
 				-position.y * scale + height / 2 - scale/2 + textsize/3);
 		}
 	}
-}
-
-//checks whether a giver number is prime or not
-//returns 1 if it is prime, 0 otherwise
-function isPrime(num) 
-{
-  for(let i = 2, s = Math.sqrt(num); i <= s; i++)
-    if(num % i === 0) return false;
-  return num > 1;
 }
 
 //Calculate a color between start and end given 
