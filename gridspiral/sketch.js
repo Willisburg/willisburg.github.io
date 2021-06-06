@@ -14,7 +14,7 @@ function setup() {
 	canvas.position(window.innerWidth/2-width/2, 50, 'relative');
 	
 	//slider for ring count and scale
-	slider1 = createSlider(1, 1000, 500);
+	slider1 = createSlider(1, 100000, 500);
 	slider1.position(window.innerWidth/2-width/2, 10);
 	slider1.size(width-20, 10);
 	
@@ -24,7 +24,7 @@ function setup() {
 	slider1Text.style('color', '#c9d1d9');
 		
 	//slider for criteria or number to be divisible by
-	slider2 = createSlider(0, 600, 343, 1);
+	slider2 = createSlider(0, 10000, 600, 1);
 	slider2.position(window.innerWidth/2-width/2, 30);
 	slider2.size(width-20, 10);
 	
