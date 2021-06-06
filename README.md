@@ -15,7 +15,7 @@ I have a lot of projects flying around the corners of my SSD, some of them are n
 [Documentation](https://github.com/Willisburg/willisburg.github.io/tree/main/gridspiral)
 
 ### Languages I use:
-- JavaScript p5.js
+- JavaScript, p5.js
 - C++
 - C
 - C#
