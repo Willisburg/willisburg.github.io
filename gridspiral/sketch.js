@@ -14,7 +14,7 @@ function setup() {
 	canvas.position(window.innerWidth/2-width/2, 50, 'relative');
 	
 	//slider for ring count and scale
-	slider1 = createSlider(1, 100000, 500);
+	slider1 = createSlider(1, 10000, 500);
 	slider1.position(window.innerWidth/2-width/2, 10);
 	slider1.size(width-20, 10);
 	
